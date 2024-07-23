@@ -36,3 +36,15 @@ soup = BeautifulSoup(html_doc,'html.parser')
 
 for link in soup.find_all('a'):
     print(link.get('href'))
+    
+print(soup.find(class_= 'vector-dropdown-content'))
+print("-----------------------------------------------------------------------")   
+# to find the children of class 'vector-dropdown-content'
+for child in soup.find(class_="vector-dropdown-content").children:
+    print(child)
+print("-----------------------------------------------------------------------")   
+
+# to find the parent of the class 'vector-dropdown-content'
+for parent in soup.find(class_ = 'vector-dropdown-content').parents:
+    print(parent)
+print("-----------------------------------------------------------------------")   
