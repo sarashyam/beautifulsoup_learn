@@ -27,6 +27,9 @@ with open('sample.html','r', encoding='utf-8') as f:
     html_doc = f.read()
 soup = BeautifulSoup(html_doc,'html.parser')
 # print(soup.prettify())
-print(soup.title) # <title>HTML - Wikipedia</title>
-print(soup.title.name) # title
-print(soup.title.string) # HTML - Wikipedia
+# print(soup.title) # <title>HTML - Wikipedia</title>
+# print(soup.title.name) # title
+# print(soup.title.string) # HTML - Wikipedia
+
+print(soup.div)
+print(soup.find_all('div')[0])
