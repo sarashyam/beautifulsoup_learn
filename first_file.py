@@ -31,5 +31,8 @@ soup = BeautifulSoup(html_doc,'html.parser')
 # print(soup.title.name) # title
 # print(soup.title.string) # HTML - Wikipedia
 
-print(soup.div)
-print(soup.find_all('div')[0])
+# print(soup.div)
+# print(soup.find_all('div')[0])
+
+for link in soup.find_all('a'):
+    print(link.get('href'))
